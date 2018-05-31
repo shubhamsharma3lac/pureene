@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header-flex-grid{\r\n    text-align: left;\r\n    font-weight: 900;\r\n    display: flex;\r\n    align-content: center;\r\n    background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n.hero-header{\r\n    flex-grow: 1;\r\n    flex-shrink: 1;\r\n    margin-left: 12px;\r\n}\r\n\r\n.hero-header span:first-child{\r\n    color: seagreen;\r\n}\r\n\r\n.nav-item{\r\n    font-size: large;\r\n    margin: 0px 12px;\r\n}\r\n\r\n.nav-item:hover{\r\n    color: seagreen;\r\n}"
+module.exports = ".app-grid{\r\n    height: 100%;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-rows: 90px 25px 0px;\r\n        grid-template-rows: 90px 25px 0px;\r\n}\r\n\r\n.header-flex-grid{\r\n    text-align: left;\r\n    font-weight: 900;\r\n    display: flex;\r\n    align-content: center;\r\n    background: #ffffff33;\r\n    -ms-grid-row: 1;\r\n    -ms-grid-row-span: 1;\r\n    grid-row: 1 / 2;\r\n}\r\n\r\n.nav-flex-grid{\r\n    text-align: left;\r\n    align-content: center;\r\n    background: rgba(255, 255, 255, 0.2);\r\n    height:25px;\r\n    -ms-grid-row: 2;\r\n    -ms-grid-row-span: 1;\r\n    grid-row: 2 / 3;\r\n}\r\n\r\nrouter-outlet{\r\n    -ms-grid-row: 3;\r\n        grid-row-start: 3;\r\n}\r\n\r\n.hero-header{\r\n    flex-grow: 1;\r\n    flex-shrink: 1;\r\n    margin-left: 12px;\r\n}\r\n\r\n.hero-header span:first-child{\r\n    color: seagreen;\r\n}\r\n\r\n.nav-item{\r\n    font-size: large;\r\n    margin: 0px 12px;\r\n}\r\n\r\n.nav-item:hover{\r\n    color: seagreen;\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ".header-flex-grid{\r\n    text-align: left;\r\n    font-weight
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div>\n    <div class=\"header-flex-grid\">\n        <h1 class=\"hero-header\">\n            <span>Pure</span>\n            <span>ene</span>\n        </h1>\n\n        <button class=\"button without-border\">Sign in</button>\n        <button class=\"button with-border\">Create Account</button>\n    </div>\n    <div class=\"nav-flex-grid\">\n        <nav>\n            <a class=\"nav-item\">HOME</a>\n            <a class=\"nav-item\">LATEST</a>\n            <a class=\"nav-item\">WIND</a>\n            <a class=\"nav-item\">SOLAR</a>\n            <a class=\"nav-item\">TIDAL</a>\n        </nav>\n    </div>\n    <router-outlet></router-outlet>\n</div>"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div class=\"app-grid\">\n    <div class=\"header-flex-grid\">\n        <h1 class=\"hero-header\">\n            <span>Pure</span>\n            <span>ene</span>\n        </h1>\n\n        <button class=\"button without-border\">Sign in</button>\n        <button class=\"button with-border\">Create Account</button>\n    </div>\n    <div class=\"nav-flex-grid\">\n        <nav>\n            <a class=\"nav-item\">HOME</a>\n            <a class=\"nav-item\">LATEST</a>\n            <a class=\"nav-item\">WIND</a>\n            <a class=\"nav-item\">SOLAR</a>\n            <a class=\"nav-item\">TIDAL</a>\n        </nav>\n    </div>\n    <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -170,7 +170,7 @@ module.exports = "\r\n.button{\r\n    height: 36px;\r\n    -ms-grid-row-align: c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\r\n\r\n.data-grid{\r\n    margin: 24px 12px;\r\n    height: 100%;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 50% 50%;\r\n        grid-template-columns: 50% 50%;\r\n}\r\n\r\n.hero-data-item{\r\n    height: 500px;\r\n    background: papayawhip;\r\n    margin-right: 8px;\r\n    background-image: url('https://www.nrel.gov/workingwithus/assets/images/13890.jpg');\r\n    background-position: 50% 50%\r\n}\r\n\r\n.side-data-item{\r\n    height: 500px;\r\n    background: papayawhip;\r\n    margin-left: 8px;\r\n    display: flex;\r\n    flex-direction: column\r\n}\r\n\r\n.single-data-item{\r\n    height: 125px;\r\n    background: wheat;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.data-item-large{\r\n    height: 250px;\r\n    background: wheat;\r\n    margin: 24px 12px;\r\n}\r\n\r\n.data-item-footer{\r\n    height: 250px;\r\n    background: black;\r\n    margin: 24px 12px;\r\n}\r\n\r\n.text-data{\r\n    align-self: baseline;\r\n    overflow: hidden;\r\n    background: rgba(255, 255, 255, 0.7);\r\n    padding: 12px;\r\n}\r\n\r\n@media only screen and (max-width: 600px){\r\n    .data-grid{\r\n        margin: 24px 0px;\r\n        height: 100%;\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .hero-data-item{\r\n        height: 500px;\r\n        background: papayawhip;\r\n    }\r\n    \r\n    .side-data-item{\r\n        height: 500px;\r\n        background: papayawhip;\r\n        display: flex;\r\n        flex-direction: column;\r\n        margin: 16px 0px 0px 0px;\r\n    }\r\n    \r\n}"
+module.exports = ".root-grid{\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (55px)[19];\r\n        grid-template-columns: repeat(19, 55px);\r\n    -ms-grid-rows: (55px)[8];\r\n        grid-template-rows: repeat(8, 55px);\r\n    grid-column-gap: 6px;\r\n    grid-row-gap: 6px;\r\n    background: whitesmoke;\r\n    margin: 8px 0px;\r\n    align-content: center;\r\n    justify-content: center;\r\n    height: calc(100% - 16px);\r\n    padding: 12px;\r\n}\r\n\r\n.item{\r\n    background: white;\r\n    min-height: 55px;\r\n    word-wrap: none;\r\n    overflow: hidden;\r\n}\r\n\r\n.group-row{\r\n    -ms-grid-column: 2;\r\n    -ms-grid-column-span: 18;\r\n    grid-column: 2 / 20;\r\n    -ms-grid-row: 1;\r\n    -ms-grid-row-span: 1;\r\n    grid-row: 1 / 2;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: (55px)[19];\r\n        grid-template-columns: repeat(19, 55px);\r\n    grid-column-gap: 6px;\r\n    text-align: center;\r\n}\r\n\r\n.group-item-even{\r\n    background: white;\r\n    height: 100%;\r\n}\r\n\r\n.group-item-odd{\r\n    background: gainsboro;\r\n    height: 100%;\r\n\r\n}\r\n\r\n.group-header{\r\n    line-height: 100%\r\n}\r\n\r\n.period-column{\r\n    -ms-grid-row: 2;\r\n    -ms-grid-row-span: 7;\r\n    grid-row: 2 / 9;\r\n    -ms-grid-column: 1;\r\n    -ms-grid-column-span: 1;\r\n    grid-column: 1 / 2;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-rows: (55px)[7];\r\n        grid-template-rows: repeat(7, 55px);\r\n    grid-row-gap: 6px;\r\n    text-align: center;\r\n}\r\n\r\n.period-item-even{\r\n    background: white;\r\n}\r\n\r\n.period-item-odd{\r\n    background: gainsboro;\r\n}\r\n\r\n.period-header{\r\n    line-height: 100%\r\n}\r\n\r\n.header-root{\r\n    position: relative;\r\n    height: 100%;\r\n}\r\n\r\n.group-name {\r\n    position: absolute;\r\n    top: 38px;\r\n    font-size: small;\r\n    margin: 0px;\r\n}\r\n\r\n.period-name {\r\n    position: absolute;\r\n    margin: 0px;\r\n    -webkit-transform: rotate(-90deg);\r\n            transform: rotate(-90deg);\r\n    top: 14px;\r\n    font-size: small;\r\n    left: 27px;\r\n}"
 
 /***/ }),
 
@@ -181,7 +181,7 @@ module.exports = "\r\n\r\n.data-grid{\r\n    margin: 24px 12px;\r\n    height: 1
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"root-grid\">\n  <div class=\"data-grid\">\n    <div class=\"hero-data-item\">\n      <div class=\"text-data\">\n        <h3>Wind Energy Basics</h3>\n        <h6>We have been harnessing the wind\\'s energy for hundreds of years. From old Holland to farms in the United States,\n          windmills have been used for pumping water or grinding grain. Today, the windmill\\'s modern equivalent</h6>\n      </div>\n    </div>\n    <div class=\"side-data-item\">\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n    </div>\n  </div>\n  <div class=\"data-item-large\">\n\n  </div>\n  <div class=\"data-item-footer\">\n\n  </div>\n</div>"
+module.exports = "<div class=\"root-grid\">\n  <div class=\"header-root\">\n    <h4 class=\"group-name\">Groups</h4>\n    <h4 class=\"period-name\">Periods</h4>\n  </div>\n  <div class=\"group-row\">\n      <div *ngFor=\"let group of groups; index as i\" [ngClass]=\"{'group-item-even item': (i%2 == 0), 'group-item-odd item': (i%2 != 0)}\">\n        <h4 class=\"group-header\">{{group.name}}</h4>\n      </div>\n  </div>\n  <div class=\"period-column\">\n      <div *ngFor=\"let period of periods; index as i\" [ngClass]=\"{'period-item-even item': (i%2 == 0), 'period-item-odd item': (i%2 != 0)}\">\n          <h4 class=\"period-header\">{{period.name}}</h4>\n      </div>\n  </div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  <div class=\"item\"></div>\n  \n\n \n\n</div>"
 
 /***/ }),
 
@@ -189,12 +189,15 @@ module.exports = "<div class=\"root-grid\">\n  <div class=\"data-grid\">\n    <d
 /*!**************************************************!*\
   !*** ./src/app/home-page/home-page.component.ts ***!
   \**************************************************/
-/*! exports provided: HomePageComponent */
+/*! exports provided: HomePageComponent, Element, ElementGroup, ElementPeriod */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomePageComponent", function() { return HomePageComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Element", function() { return Element; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementGroup", function() { return ElementGroup; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ElementPeriod", function() { return ElementPeriod; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -208,6 +211,15 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 var HomePageComponent = /** @class */ (function () {
     function HomePageComponent() {
+        this.elements = new Array();
+        this.groups = new Array();
+        this.periods = new Array();
+        for (var index = 1; index < 19; index++) {
+            this.groups.push(new ElementGroup(index.toString()));
+        }
+        for (var index = 1; index < 8; index++) {
+            this.periods.push(new ElementPeriod(index.toString()));
+        }
     }
     HomePageComponent.prototype.ngOnInit = function () {
     };
@@ -220,6 +232,28 @@ var HomePageComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], HomePageComponent);
     return HomePageComponent;
+}());
+
+var Element = /** @class */ (function () {
+    function Element(group, period) {
+        this.group = group;
+        this.period = period;
+    }
+    return Element;
+}());
+
+var ElementGroup = /** @class */ (function () {
+    function ElementGroup(name) {
+        this.name = name;
+    }
+    return ElementGroup;
+}());
+
+var ElementPeriod = /** @class */ (function () {
+    function ElementPeriod(name) {
+        this.name = name;
+    }
+    return ElementPeriod;
 }());
 
 
