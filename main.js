@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = ".header-flex-grid{\r\n    text-align: left;\r\n    font-weight: 900;\r\n    display: flex;\r\n    align-content: center;\r\n    background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n.hero-header{\r\n    flex-grow: 1;\r\n    flex-shrink: 1;\r\n    margin-left: 12px;\r\n}\r\n\r\n.hero-header span:first-child{\r\n    color: seagreen;\r\n}\r\n\r\n.nav-item{\r\n    font-size: large;\r\n    margin: 0px 12px;\r\n}\r\n\r\n.nav-item:hover{\r\n    color: seagreen;\r\n}"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = ""
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<router-outlet></router-outlet>\n\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div>\n    <div class=\"header-flex-grid\">\n        <h1 class=\"hero-header\">\n            <span>Pure</span>\n            <span>ene</span>\n        </h1>\n\n        <button class=\"button without-border\">Sign in</button>\n        <button class=\"button with-border\">Create Account</button>\n    </div>\n    <div class=\"nav-flex-grid\">\n        <nav>\n            <a class=\"nav-item\">HOME</a>\n            <a class=\"nav-item\">LATEST</a>\n            <a class=\"nav-item\">WIND</a>\n            <a class=\"nav-item\">SOLAR</a>\n            <a class=\"nav-item\">TIDAL</a>\n        </nav>\n    </div>\n    <router-outlet></router-outlet>\n</div>"
 
 /***/ }),
 
@@ -71,7 +71,7 @@ var AppComponent = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html"),
-            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
+            styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css"), __webpack_require__(/*! ./button-styles.css */ "./src/app/button-styles.css")]
         })
     ], AppComponent);
     return AppComponent;
@@ -141,6 +141,17 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/button-styles.css":
+/*!***********************************!*\
+  !*** ./src/app/button-styles.css ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\r\n.button{\r\n    height: 36px;\r\n    -ms-grid-row-align: center;\r\n        align-self: center;\r\n    margin-right: 12px;\r\n    background: transparent;\r\n    cursor: pointer;\r\n    outline: 0px;\r\n    transition: 200ms linear;\r\n    font-size: medium;\r\n    color: seagreen;\r\n}\r\n\r\n.without-border{\r\n    border: 0px;\r\n\r\n}\r\n\r\n.without-border:hover{\r\n    color: seagreen;\r\n}\r\n\r\n.with-border{\r\n    border: 2px solid seagreen;\r\n    border-radius: 4px;\r\n    color: seagreen\r\n}\r\n\r\n.with-border:hover{\r\n    color: white;\r\n    background: seagreen;\r\n}\r\n\r\n"
+
+/***/ }),
+
 /***/ "./src/app/home-page/button-styles.css":
 /*!*********************************************!*\
   !*** ./src/app/home-page/button-styles.css ***!
@@ -159,7 +170,7 @@ module.exports = "\r\n.button{\r\n    height: 36px;\r\n    -ms-grid-row-align: c
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".header-flex-grid{\r\n    text-align: left;\r\n    font-weight: 900;\r\n    display: flex;\r\n    align-content: center;\r\n    background: rgba(255, 255, 255, 0.2);\r\n}\r\n\r\n.hero-header{\r\n    flex-grow: 1;\r\n    flex-grow: 1;\r\n    margin-left: 12px;\r\n}\r\n\r\n.hero-header span:first-child{\r\n    color: seagreen;\r\n}\r\n\r\n.nav-item{\r\n    font-size: large;\r\n    margin: 0px 12px;\r\n}\r\n\r\n.nav-item:hover{\r\n    color: seagreen;\r\n}\r\n\r\n.data-grid{\r\n    margin: 24px 12px;\r\n    height: 100%;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 50% 50%;\r\n        grid-template-columns: 50% 50%;\r\n}\r\n\r\n.hero-data-item{\r\n    height: 500px;\r\n    background: papayawhip;\r\n    margin-right: 8px;\r\n    background-image: url('https://www.nrel.gov/workingwithus/assets/images/13890.jpg');\r\n    background-position: 50% 50%\r\n}\r\n\r\n.side-data-item{\r\n    height: 500px;\r\n    background: papayawhip;\r\n    margin-left: 8px;\r\n    display: flex;\r\n    flex-direction: column\r\n}\r\n\r\n.single-data-item{\r\n    height: 125px;\r\n    background: wheat;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.data-item-large{\r\n    height: 250px;\r\n    background: wheat;\r\n    margin: 24px 12px;\r\n}\r\n\r\n.data-item-footer{\r\n    height: 250px;\r\n    background: black;\r\n    margin: 24px 12px;\r\n}\r\n\r\n.text-data{\r\n    align-self: baseline;\r\n    overflow: hidden;\r\n    background: rgba(255, 255, 255, 0.7);\r\n    padding: 12px;\r\n}\r\n\r\n@media only screen and (max-width: 600px){\r\n    .data-grid{\r\n        margin: 24px 0px;\r\n        height: 100%;\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .hero-data-item{\r\n        height: 500px;\r\n        background: papayawhip;\r\n    }\r\n    \r\n    .side-data-item{\r\n        height: 500px;\r\n        background: papayawhip;\r\n        display: flex;\r\n        flex-direction: column;\r\n        margin: 16px 0px 0px 0px;\r\n    }\r\n    \r\n}"
+module.exports = "\r\n\r\n.data-grid{\r\n    margin: 24px 12px;\r\n    height: 100%;\r\n    display: -ms-grid;\r\n    display: grid;\r\n    -ms-grid-columns: 50% 50%;\r\n        grid-template-columns: 50% 50%;\r\n}\r\n\r\n.hero-data-item{\r\n    height: 500px;\r\n    background: papayawhip;\r\n    margin-right: 8px;\r\n    background-image: url('https://www.nrel.gov/workingwithus/assets/images/13890.jpg');\r\n    background-position: 50% 50%\r\n}\r\n\r\n.side-data-item{\r\n    height: 500px;\r\n    background: papayawhip;\r\n    margin-left: 8px;\r\n    display: flex;\r\n    flex-direction: column\r\n}\r\n\r\n.single-data-item{\r\n    height: 125px;\r\n    background: wheat;\r\n    margin-bottom: 8px;\r\n}\r\n\r\n.data-item-large{\r\n    height: 250px;\r\n    background: wheat;\r\n    margin: 24px 12px;\r\n}\r\n\r\n.data-item-footer{\r\n    height: 250px;\r\n    background: black;\r\n    margin: 24px 12px;\r\n}\r\n\r\n.text-data{\r\n    align-self: baseline;\r\n    overflow: hidden;\r\n    background: rgba(255, 255, 255, 0.7);\r\n    padding: 12px;\r\n}\r\n\r\n@media only screen and (max-width: 600px){\r\n    .data-grid{\r\n        margin: 24px 0px;\r\n        height: 100%;\r\n        display: flex;\r\n        flex-direction: column;\r\n    }\r\n\r\n    .hero-data-item{\r\n        height: 500px;\r\n        background: papayawhip;\r\n    }\r\n    \r\n    .side-data-item{\r\n        height: 500px;\r\n        background: papayawhip;\r\n        display: flex;\r\n        flex-direction: column;\r\n        margin: 16px 0px 0px 0px;\r\n    }\r\n    \r\n}"
 
 /***/ }),
 
@@ -170,7 +181,7 @@ module.exports = ".header-flex-grid{\r\n    text-align: left;\r\n    font-weight
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"root-grid\">\n  <div class=\"header-flex-grid\">\n    <h1 class=\"hero-header\">\n      <span>Pure</span>\n      <span>ene</span>\n    </h1>\n\n    <button class=\"button without-border\">Sign in</button>\n    <button class=\"button with-border\">Create Account</button>\n  </div>\n  <div class=\"nav-flex-grid\">\n    <nav>\n      <a class=\"nav-item\">HOME</a>\n      <a class=\"nav-item\">LATEST</a>\n      <a class=\"nav-item\">WIND</a>\n      <a class=\"nav-item\">SOLAR</a>\n      <a class=\"nav-item\">TIDAL</a>\n    </nav>\n  </div>\n  <div class=\"data-grid\">\n    <div class=\"hero-data-item\">\n      <div class=\"text-data\">\n        <h3>Wind Energy Basics</h3>\n        <h6>We have been harnessing the wind\\'s energy for hundreds of years. From old Holland to farms in the United States,\n          windmills have been used for pumping water or grinding grain. Today, the windmill\\'s modern equivalent</h6>\n      </div>\n    </div>\n    <div class=\"side-data-item\">\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n    </div>\n  </div>\n  <div class=\"data-item-large\">\n\n  </div>\n  <div class=\"data-item-footer\">\n\n  </div>\n</div>"
+module.exports = "<div class=\"root-grid\">\n  <div class=\"data-grid\">\n    <div class=\"hero-data-item\">\n      <div class=\"text-data\">\n        <h3>Wind Energy Basics</h3>\n        <h6>We have been harnessing the wind\\'s energy for hundreds of years. From old Holland to farms in the United States,\n          windmills have been used for pumping water or grinding grain. Today, the windmill\\'s modern equivalent</h6>\n      </div>\n    </div>\n    <div class=\"side-data-item\">\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n      <div class=\"single-data-item\">\n\n      </div>\n    </div>\n  </div>\n  <div class=\"data-item-large\">\n\n  </div>\n  <div class=\"data-item-footer\">\n\n  </div>\n</div>"
 
 /***/ }),
 
