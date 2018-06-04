@@ -402,7 +402,7 @@ var PeriodicTable = /** @class */ (function () {
     PeriodicTable.prototype.getJSON = function () {
         var _this = this;
         var promise = new Promise(function (resolve, reject) {
-            _this.http.get('webapp/angular/assets/data.json').toPromise()
+            _this.http.get('./assets/data.json').toPromise()
                 .then(function (result) {
                 resolve(result);
             }, function (err) {
